@@ -1,0 +1,26 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "Fast package elertron.",
+  "main": "electron_main.js",
+  "scripts": {
+    "package_win": "electron-packager ./ --out . --platform=win32  --arch=x64 --icon=./icon/logo.ico",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^25.0.0"
+  },
+  "dependencies": {
+    "electron-packager": "^17.1.1"
+  }
+}
