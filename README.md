@@ -17,7 +17,7 @@ Execute a local image build.
 docker build -t fast-package-electron:25-wine64 . 
 ```
 # Executing Packaging
-Go to the directory where you want to package (with "index.html" at the same level), and execute the following command. Replace "$(pwd)" with the directory you want to package, such as "/root/project".
+Go to the directory where you want to package (with "index.html" at the same level), and execute the following command. Replace `$(pwd)` with the directory you want to package, such as `/root/project`.
 
 ```bash
 docker run --rm --name my_container \
