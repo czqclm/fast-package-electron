@@ -1,4 +1,4 @@
-[中文](https://github.com/czqclm/fast-package-electron/README_CN.md)
+[中文](https://github.com/czqclm/fast-package-electron/blob/main/README_CN.md)
 > Since Electron has strict environmental requirements, including but not limited to node version, npm version, and dependencies on wine and wine64, upgrading and migrating become very difficult.
 
 Runtime environment requirements: Docker.
