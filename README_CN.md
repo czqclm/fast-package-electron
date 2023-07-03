@@ -4,7 +4,7 @@
  
 ## 构建镜像
 > 构建镜像这一步请一定前往网络环境较好的机器上执行，辟如海外 vps 等，国内打包容易发生错误（主要是 wine 与 electron 的依赖）
-> 如不想自己构建，请看 `执行打包` 部分，可以用我构建好的 `czqclm/fast-package-electron:25-wine64`
+> 如不想自己构建，请看 `执行打包` 部分，可以用我构建好的 `czqclm/fast-package-electron:22-wine`
 
 项目地址: https://github.com/czqclm/fast-package-electron
 拉取项目文件
@@ -13,7 +13,7 @@ git clone https://github.com/czqclm/fast-package-electron
 ```
 执行本地构建镜像
 ```bash
-docker build -t fast-package-electron:25-wine64 . 
+docker build -t fast-package-electron:22-wine . 
 ```
 
 ## 执行打包
@@ -21,8 +21,8 @@ docker build -t fast-package-electron:25-wine64 .
 ```bash
 docker run --rm --name my_container \
 -v $(pwd):/project \
-fast-package-electron:25-wine64 \
-/bin/sh -c "cp -r /package_lib/node_modules /project && cd /project && npm run package_win"
+fast-package-electron:22-wine \
+/bin/sh -c "cp -r /package_lib/node_modules /project && cd /project && npm run package_win64"
 ```
 如果打包没有问题即可在 `app-win32-x64` 目录下找到你想要的文件了
 
@@ -31,6 +31,6 @@ docker hub: https://hub.docker.com/r/czqclm/fast-package-electron
 ```bash
 docker run --rm --name my_container \
 -v $(pwd):/project \
-czqclm/fast-package-electron:25-wine64 \
+fast-package-electron:22-wine \
 /bin/sh -c "cp -r /package_lib/node_modules /project && cd /project && npm run package_win"
 ```
