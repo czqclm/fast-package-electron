@@ -4,7 +4,8 @@
   "description": "Fast package elertron.",
   "main": "electron_main.js",
   "scripts": {
-    "package_win": "electron-packager ./ --out . --platform=win32  --arch=x64 --icon=./icon/logo.ico",
+    "package_win64": "electron-packager ./ --out . --platform=win32  --arch=x64 --icon=./icon/logo.ico",
+    "package_win32": "electron-packager ./ --out . --platform=win32  --arch=ia32 --icon=./icon/logo.ico",
     "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
@@ -18,7 +19,7 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^25.0.0"
+    "electron": "^22.3.15"
   },
   "dependencies": {
     "electron-packager": "^17.1.1"
