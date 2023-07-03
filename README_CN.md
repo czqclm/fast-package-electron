@@ -32,5 +32,5 @@ docker hub: https://hub.docker.com/r/czqclm/fast-package-electron
 docker run --rm --name my_container \
 -v $(pwd):/project \
 fast-package-electron:22-wine \
-/bin/sh -c "cp -r /package_lib/node_modules /project && cd /project && npm run package_win"
+/bin/sh -c "cp -r /package_lib/node_modules /project && cd /project && npm run package_win64"
 ```
